@@ -12,7 +12,7 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">  
 
     <context:annotation-config></context:annotation-config>  
-    <context:component-scan base-package="com.purchase"></context:component-scan>  
+    <context:component-scan base-package="com.ecommerce"></context:component-scan>  
         
 
 
@@ -34,7 +34,7 @@
 <!-- session factory -->        
  <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
  	<property name="dataSource" ref="c3p0DataSource"></property>
- 	 <property name="packagesToScan" value="com.purchase.bean"/>  
+ 	 <property name="packagesToScan" value="com.ecommerce.bean"/>  
  	<property name="hibernateProperties">
  		<props>
  			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
