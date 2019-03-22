@@ -53,26 +53,7 @@
 
 <tx:annotation-driven  transaction-manager="transactionManager" />      
  
- <!-- thymeleaf conf       -->  
-<bean id="templateResolver"
-       class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
-  <property name="prefix" value="/WEB-INF/templates/" />
-  <property name="suffix" value=".html" />
-  <property name="templateMode" value="HTML" />
-  <property name="cacheable" value="false"></property>
-</bean>
-    
-<bean id="templateEngine"
-      class="org.thymeleaf.spring5.SpringTemplateEngine">
-  <property name="templateResolver" ref="templateResolver" />
-</bean>
 
- <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
-  <property name="templateEngine" ref="templateEngine" />
-</bean>
-
-<mvc:default-servlet-handler/>
-<mvc:annotation-driven></mvc:annotation-driven>
  
 
 

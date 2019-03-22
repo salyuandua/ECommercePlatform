@@ -19,7 +19,7 @@
 <!-- datasource -->
 <bean id="c3p0DataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
 	 <property name="driverClass" value="com.mysql.cj.jdbc.Driver"></property>  
-        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/purchase_system"></property>  
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/ecommerce"></property>  
         <property name="user" value="root"></property>  
         <property name="password" value="1234"></property>  
    <!-- <property name="checkoutTimeout" value="${jdbc.checkoutTimeout}" />  

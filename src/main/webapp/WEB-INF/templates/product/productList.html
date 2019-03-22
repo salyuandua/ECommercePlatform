@@ -1,0 +1,25 @@
+<div class="ui link cards">
+  <div class="card" th:each="product : ${products}">
+    <div class="image">
+      <img src="/images/avatar2/large/matthew.png">
+    </div>
+    <div class="content">
+      <div class="header" th:text="${product.name}"></div>
+      <div class="meta">
+        By: <a th:text="${product.company.name}"></a>
+      </div>
+      <div class="description">
+        <span th:text="'$'+${product.price}"></span>
+      </div>
+    </div>
+   <!-- <div class="extra content">
+      <span class="right floated">
+        Joined in 2013
+      </span>
+      <span>
+        <i class="user icon"></i>
+        75 Friends
+      </span>
+    </div> --> 
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ECommerce Platform</title>
+<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+<link rel="stylesheet" type="text/css" href="css/image.min.css">
+<link rel="stylesheet" type="text/css" href="css/icon.min.css">
+ 
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/dataTables.semanticui.min.css">
+<link rel="icon" href="//www.marshall.edu/favicon.ico">
+</head>
+<body>
+<div class="ui left demo vertical inverted sidebar labeled icon menu">
+	<a class="item" th:each="department : ${departments}">
+      <span th:text="${department.name}"></span>
+    </a>
+
+
+</div>
+<!--- -------------------------- top menu ------------------------------------------------------>
+<div class="ui blue large borderless fixed fluid pointing  menu" style="height: 13%">
+  <a class="item" id="menu_traggle">
+    <i class="sidebar icon"></i>
+    
+  </a>
+	<a class="header item" href="home" style="width: 20%;height: 100%"><img src="images/ecommerce-logo.jpeg" style="width: 100%;height: 100%"></a>
+	<div class="item" style="width: 50%;margin-left: auto;margin-right: auto;">
+		<div class="ui fluid action input">
+		  <input type="text" placeholder="Search...">
+		  <button class="ui button">Search</button>
+	   </div>		
+	
+	</div>  	
+
+
+   			
+            
+
+    
+    
+    <div class="right menu">
+
+        <div class="ui  dropdown item">
+      
+      <span >User name</span> <i class="dropdown icon"></i>
+      <div class=" menu" style="width: 200px">
+        <a class="item" ><span style="color: red">Log Out</span></a>
+      </div>
+    </div>
+     </div>
+    </div>
+<!--- -------------------------- top menu end------------------------------------------------------> 
+
+
+			<div class="ui blue segment" id="content_seg" style=""></div>
+
+<!-----------------------------------main model---------------------------------------------  -->    
+<div id="mainModel" class="ui large modal">
+
+</div>
+
+
+</body>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/semantic.min.js"></script>
+
+<script type="text/javascript" src="js/pub.js"></script>
+
+<script type="text/javascript" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.semanticui.min.js"></script>
+
+<script type="text/javascript" src="js/jQuery.print.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+
+
+</html>
