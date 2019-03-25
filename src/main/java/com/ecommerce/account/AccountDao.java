@@ -10,5 +10,7 @@ public interface AccountDao {
 	public List<Company> companyList();
 	
 	public boolean signup(Account account);
+
+	
 	
 }

@@ -24,6 +24,8 @@ public class DefaultAccountDao implements AccountDao{
 		return false;
 	}
 
+	
+	
 	@Override
 	public List<Company> companyList() {
 		Session session=sessionFactory.getCurrentSession();
