@@ -4,7 +4,14 @@
     Sign up
   </div>
   <div class="content">
-	<form class="ui form" id="signinForm">
+  	<div class="ui two blue item menu">
+	  <a class="item active" data-tab="ind_signup">Individual Account</a>
+	  <a class="item" data-tab="cor_signup">Corporation Account</a>
+	</div>
+	<!-- ---------------------------- Individual form-->
+	<div class="ui active tab" data-tab="ind_signup">
+  	<form class="ui form" id="signinForm1">
+  		
 	  <div class="required field">
 	  	<label>Name:</label>
 	  	<div class="three fields">
@@ -20,33 +27,59 @@
 	  	</div>
 	  	
 	  </div>
-	
-	
-	
 	  <div class="required field">
 	    <label>Email:</label>
 	    <input type="text" name="email" placeholder="Email">
 	  </div>
 	  <div class="required field">
 	    <label>Password:</label>
-	    <input type="text" name="password" placeholder="Last Name">
+	    <input type="text" name="password" placeholder="Password">
 	  </div>
-	  <div class="required field">
-	  	<label>Role:</label>
-	  	<div class="ui selection dropdown">
-		  <input type="hidden" name="role">
-		  <i class="dropdown icon"></i>
-		  <div class="default text">Role</div>
-		  <div class="menu" >
-		    <div class="item" th:each="role : ${roles}" th:data-value="${role.id}" th:text="${role.name}"></div>
-		  </div>
-		</div>
-	  </div>
-	  <div class="required field">
-	    <label id="codeLabel">Code:<i class="exclamation circle orange icon"  data-content="Please request sign up code from administrator" data-position="top left"></i></label>
-	    <input type="text" name="code" placeholder="Code">
-	  </div>
-		<div id="signupBut" class="ui fluid large blue  button">Sign up</div>
+
+		<div id="signupBut1" class="ui fluid large blue  button">Sign up</div>
 		<div class="ui error message"></div>
-	</form>
+  	</form>
+</div>
+
+
+	<!-- ---------------------------- Cor form-->
+	<div class="ui tab" data-tab="cor_signup">
+  <!-- Tab Content !-->
+  		  	<form class="ui form" id="signinForm2">
+  	<div class="required field">
+  		<label>Corporation Name:</label>
+  		<input type="text" name="companyName" placeholder="Corporation Name">
+  	
+  	
+  	</div>	
+  		
+
+	  <div class="required field">
+	    <label>Corporation Email:</label>
+	    <input type="text" name="email" placeholder="Email">
+	  </div>
+	  <div class="required field">
+	    <label>Password:</label>
+	    <input type="text" name="password" placeholder="Password">
+	  </div>
+
+		<div id="signupBut2" class="ui fluid large blue  button">Sign up</div>
+		<div class="ui error message"></div>
+  	</form>
+  
 	</div>
+	
+	
+	</div>
+	
+<script type="text/javascript">
+
+	$(function(){
+		$('.item.menu .item').tab();
+		
+	});
+
+</script>
+	
+	
+	

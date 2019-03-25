@@ -1,5 +1,10 @@
 package com.ecommerce.account;
 
-public interface AccountService {
+import java.util.List;
 
+import com.ecommerce.bean.Company;
+
+public interface AccountService {
+	public List<Company> companyList();
+	
 }
